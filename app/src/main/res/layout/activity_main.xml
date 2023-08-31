@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvStundenLohn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="44dp"
+        android:text="Stundenlohn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etStundenlohn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:contentDescription=" "
+        android:ems="10"
+        android:hint="Stundenlohn"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStundenLohn"
+        app:layout_constraintStart_toEndOf="@+id/tvStundenLohn"
+        app:layout_constraintTop_toTopOf="@+id/tvStundenLohn"
+        app:layout_constraintVertical_bias="0.612"
+        tools:text="Stundenlohn" />
+
+    <TextView
+        android:id="@+id/tvGearbeiteteStunden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Gearbeitete Stunden"
+        app:layout_constraintEnd_toEndOf="@+id/tvStundenLohn"
+        app:layout_constraintTop_toBottomOf="@+id/tvStundenLohn" />
+
+    <EditText
+        android:id="@+id/etGearbeiteteStunden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Stunden"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGearbeiteteStunden"
+        app:layout_constraintStart_toStartOf="@+id/etStundenlohn"
+        app:layout_constraintTop_toTopOf="@+id/tvGearbeiteteStunden"
+        tools:text="Stunden" />
+
+    <TextView
+        android:id="@+id/tvStartlohn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Startlohn"
+        app:layout_constraintEnd_toEndOf="@+id/tvHeuteVerdientText"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeuteVerdientText" />
+
+    <TextView
+        android:id="@+id/tvHeuteVerdientText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Heute verdient"
+        app:layout_constraintEnd_toEndOf="@+id/tvGearbeiteteStunden"
+        app:layout_constraintTop_toBottomOf="@+id/tvGearbeiteteStunden" />
+
+    <EditText
+        android:id="@+id/etStartlohn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Startlohn"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStartlohn"
+        app:layout_constraintStart_toStartOf="@+id/etStundenlohn"
+        app:layout_constraintTop_toTopOf="@+id/tvStartlohn"
+        tools:text="Startlohn" />
+
+    <TextView
+        android:id="@+id/tvHeuteVerdientZahl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHeuteVerdientText"
+        app:layout_constraintStart_toStartOf="@+id/etStundenlohn"
+        app:layout_constraintTop_toTopOf="@+id/tvHeuteVerdientText"
+        tools:text="30€" />
+
+    <TextView
+        android:id="@+id/tvGesamtlohnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Gesamtlohn"
+        app:layout_constraintEnd_toEndOf="@+id/tvStartlohn"
+        app:layout_constraintTop_toBottomOf="@+id/tvStartlohn" />
+
+    <TextView
+        android:id="@+id/tvGesamtlohnZahl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGesamtlohnText"
+        app:layout_constraintStart_toStartOf="@+id/etStartlohn"
+        app:layout_constraintTop_toTopOf="@+id/tvGesamtlohnText"
+        tools:text="300" />
+</androidx.constraintlayout.widget.ConstraintLayout>
