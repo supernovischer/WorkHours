@@ -76,6 +76,10 @@ class MainActivity : AppCompatActivity() {
 
             tvHeuteVerdientZahl.text = "${"%.2f".format(heuteVerdient)}€"
             tvGesamtlohnZahl.text = "${"%.2f".format(gesamtlohn)}€"
+        } else if(stundenlohn != null && gearbeiteteStunden != null){
+val heuteVerdient = stundenlohn * gearbeiteteStunden
+            tvHeuteVerdientZahl.text = "${"%.2f".format(heuteVerdient)}€"
+            tvGesamtlohnZahl.text = "${"%.2f".format(heuteVerdient)}€"
         } else {
             tvHeuteVerdientZahl.text = "0.00€"
             tvGesamtlohnZahl.text = "0.00€"
