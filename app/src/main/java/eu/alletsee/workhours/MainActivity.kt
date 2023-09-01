@@ -10,6 +10,7 @@ import android.text.TextWatcher
 import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
+import androidx.compose.material3.Scaffold
 
 private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
@@ -107,6 +108,8 @@ val heuteVerdient = stundenlohn * gearbeiteteStunden
         etStartlohn.setText(sharedPref.getString("startlohn", ""))
 
     }
+
+
 
 
 
