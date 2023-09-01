@@ -1,8 +1,6 @@
 package eu.alletsee.workhours
 
 import android.content.Context
-import android.content.SharedPreferences
-import android.content.SharedPreferences.Editor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -10,7 +8,6 @@ import android.text.TextWatcher
 import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
-import androidx.compose.material3.Scaffold
 
 private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
