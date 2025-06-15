@@ -10,8 +10,8 @@
         android:id="@+id/tvStundenLohn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Stundenlohn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +28,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvStundenLohn"
         app:layout_constraintStart_toEndOf="@+id/tvStundenLohn"
         app:layout_constraintTop_toTopOf="@+id/tvStundenLohn"
-        app:layout_constraintVertical_bias="0.612"
         tools:text="Stundenlohn" />
 
     <TextView
@@ -37,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Gearbeitete Stunden"
-        app:layout_constraintEnd_toEndOf="@+id/tvStundenLohn"
+        app:layout_constraintStart_toStartOf="@+id/tvStundenLohn"
         app:layout_constraintTop_toBottomOf="@+id/tvStundenLohn" />
 
     <EditText
@@ -53,13 +52,115 @@
         tools:text="Stunden" />
 
     <TextView
-        android:id="@+id/tvStartlohn"
+        android:id="@+id/tvDatum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Startlohn"
-        app:layout_constraintEnd_toEndOf="@+id/tvHeuteVerdientText"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeuteVerdientText" />
+        android:text="Datum"
+        app:layout_constraintStart_toStartOf="@+id/tvGearbeiteteStunden"
+        app:layout_constraintTop_toBottomOf="@+id/tvGearbeiteteStunden" />
+
+    <EditText
+        android:id="@+id/etDatum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="DD.MM.YYYY"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDatum"
+        app:layout_constraintStart_toStartOf="@+id/etGearbeiteteStunden"
+        app:layout_constraintTop_toTopOf="@+id/tvDatum" />
+
+    <TextView
+        android:id="@+id/tvStartzeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Startzeit"
+        app:layout_constraintStart_toStartOf="@+id/tvDatum"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatum" />
+
+    <EditText
+        android:id="@+id/etStartzeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="HH:MM"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStartzeit"
+        app:layout_constraintStart_toStartOf="@+id/etDatum"
+        app:layout_constraintTop_toTopOf="@+id/tvStartzeit" />
+
+    <TextView
+        android:id="@+id/tvEndzeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Endzeit"
+        app:layout_constraintStart_toStartOf="@+id/tvStartzeit"
+        app:layout_constraintTop_toBottomOf="@+id/tvStartzeit" />
+
+    <EditText
+        android:id="@+id/etEndzeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="HH:MM"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEndzeit"
+        app:layout_constraintStart_toStartOf="@+id/etStartzeit"
+        app:layout_constraintTop_toTopOf="@+id/tvEndzeit" />
+
+    <TextView
+        android:id="@+id/tvStartzeit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Startzeit"
+        app:layout_constraintStart_toStartOf="@+id/tvDatum"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatum" />
+
+    <EditText
+        android:id="@+id/etStartzeit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="HH:MM"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStartzeit2"
+        app:layout_constraintStart_toStartOf="@+id/etDatum"
+        app:layout_constraintTop_toTopOf="@+id/tvStartzeit2" />
+
+    <TextView
+        android:id="@+id/tvEndzeit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Endzeit"
+        app:layout_constraintStart_toStartOf="@+id/tvStartzeit2"
+        app:layout_constraintTop_toBottomOf="@+id/tvStartzeit2" />
+
+    <EditText
+        android:id="@+id/etEndzeit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="HH:MM"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEndzeit2"
+        app:layout_constraintStart_toStartOf="@+id/etStartzeit2"
+        app:layout_constraintTop_toTopOf="@+id/tvEndzeit2" />
+
+    <Button
+        android:id="@+id/btnAddEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Eintrag hinzufügen"
+        app:layout_constraintStart_toStartOf="@+id/tvEndzeit2"
+        app:layout_constraintTop_toBottomOf="@+id/tvEndzeit2" />
 
     <TextView
         android:id="@+id/tvHeuteVerdientText"
@@ -67,8 +168,26 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Heute verdient"
-        app:layout_constraintEnd_toEndOf="@+id/tvGearbeiteteStunden"
-        app:layout_constraintTop_toBottomOf="@+id/tvGearbeiteteStunden" />
+        app:layout_constraintStart_toStartOf="@+id/btnAddEntry"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddEntry" />
+
+    <TextView
+        android:id="@+id/tvHeuteVerdientZahl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHeuteVerdientText"
+        app:layout_constraintStart_toStartOf="@+id/etDatum"
+        app:layout_constraintTop_toTopOf="@+id/tvHeuteVerdientText"
+        tools:text="30€" />
+
+    <TextView
+        android:id="@+id/tvStartlohn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Startlohn"
+        app:layout_constraintStart_toStartOf="@+id/tvHeuteVerdientText"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeuteVerdientText" />
 
     <EditText
         android:id="@+id/etStartlohn"
@@ -76,20 +195,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Startlohn"
-        android:inputType="text"
+        android:inputType="number|numberDecimal"
         app:layout_constraintBottom_toBottomOf="@+id/tvStartlohn"
-        app:layout_constraintStart_toStartOf="@+id/etStundenlohn"
-        app:layout_constraintTop_toTopOf="@+id/tvStartlohn"
-        tools:text="Startlohn" />
-
-    <TextView
-        android:id="@+id/tvHeuteVerdientZahl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/tvHeuteVerdientText"
-        app:layout_constraintStart_toStartOf="@+id/etStundenlohn"
-        app:layout_constraintTop_toTopOf="@+id/tvHeuteVerdientText"
-        tools:text="30€" />
+        app:layout_constraintStart_toStartOf="@+id/tvHeuteVerdientZahl"
+        app:layout_constraintTop_toTopOf="@+id/tvStartlohn" />
 
     <TextView
         android:id="@+id/tvGesamtlohnText"
@@ -97,7 +206,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Gesamtlohn"
-        app:layout_constraintEnd_toEndOf="@+id/tvStartlohn"
+        app:layout_constraintStart_toStartOf="@+id/tvStartlohn"
         app:layout_constraintTop_toBottomOf="@+id/tvStartlohn" />
 
     <TextView
@@ -108,4 +217,27 @@
         app:layout_constraintStart_toStartOf="@+id/etStartlohn"
         app:layout_constraintTop_toTopOf="@+id/tvGesamtlohnText"
         tools:text="300" />
+
+    <TextView
+        android:id="@+id/tvEintraege"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Arbeitseinträge"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvGesamtlohnText"
+        app:layout_constraintTop_toBottomOf="@+id/tvGesamtlohnText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWorkEntries"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEintraege" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
